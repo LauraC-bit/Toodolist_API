@@ -1,29 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Courgette&family=Dancing+Script:wght@600&display=swap');
+/* font-family: 'Alegreya Sans',
+sans-serif;
+font-family: 'Courgette',
+cursive;
+font-family: 'Dancing Script',
+cursive; */
+
+html {
+  display: flex;
+  flex-direction: column;
+  font-size: 62.5%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
 .body {
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  min-height: 100%;
+  flex: 1 0;
+  line-height: 1.618;
+  font-size: calc(1.2rem + 0.6vmin);
+  box-shadow: 0px 3px 10px 0px black;
+  font-family: 'Alegreya Sans',sans-serif;
+  
+}
+
+.body:before {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(../assets/pexels-andrea-davis-3653849.jpg) fixed no-repeat center;
+  background-size: cover;
+  opacity: .3;
+  content: "";
+  z-index: -1;
+
+}
+
+.h1-style {
+  font-family: 'Dancing Script',cursive;
+  font-size: calc(8rem + 0.6vmin);
 }
 
 .inputDiv {
-  background-color: indianred;
-  min-height: 78px;
-  min-width: 100%;
+  min-height: 178px;
+  min-width: 496px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 30px 0 30px;
+  gap: 30px;
+  
 }
 
 .input {
+  display: flex;
+  align-items: center;
   flex: 3 0;
+  font-size: large;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: -1px 1px 5px 0px black;
+  line-height: 1.8;
 }
 
 .button {
   flex: 1 0;
+  opacity: 0.85;
+  font-size: 16px;
+  background: linear-gradient(#b96e1c, #634439b8);
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  border: none;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.8;
+}
+
+.button:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .finalData {
   display: flex;
-  justify-content: center;
-  padding: 50px;
+  justify-content:space-between;
+  padding: 20px 30px 20px 30px;
+  font-size: calc(1.6rem + 0.6vmin);
+  min-width: 450px;
+  border-radius: 25px;
+  margin: 18px;
+  border: 0.2rem solid white;
+  background: linear-gradient(to bottom, #C19A6B 0%, #B28B5C 100%);
+  color: white;
+  opacity: 0.86;
+  gap: 8px;
 }
+
+.finalData:hover {
+  opacity:1;
+  cursor: pointer;
+}
+
+.inputCheckbox {
+  width: 25px;
+}
+
