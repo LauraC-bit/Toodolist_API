@@ -82,6 +82,13 @@ const main = async () => {
         p.classList.add("text");
         div.setAttribute("id", "delete");
         trashCan.classList.remove("disabled");
+        //---------------------------------
+        const dataFromLocalS = localStorage.getItem("data");
+        const finalData = JSON.parse(dataFromLocalS);
+        console.log(finalData);
+        element.id = "delete"; //s'affiche pas [{...}]
+        localStorage.setItem("data", JSON.stringify(finalData));
+        //---------------------------------
         console.log(element.completed);
       } else if (inputCheckbox.value === "checked") {
         element.completed = false;
@@ -97,11 +104,6 @@ const main = async () => {
       if ((inputCheckbox.value = "checked" && div.id === "delete")) {
         container.removeChild(div);
 
-        const dataFromLocalS = localStorage.getItem("data");
-        const finalData = JSON.parse(dataFromLocalS);
-        let index = finalData.indexOf();
-        finalData.splice(index, 1);
-        localStorage.setItem("data", JSON.stringify(finalData));
         //fonctionne mais supprime le dernier élément du storage mais pas le bon; -- index? usefull? change completed in cross if, for saying if completed is true delete this one?
       }
     };
